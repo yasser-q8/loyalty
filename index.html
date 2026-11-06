@@ -3,22 +3,59 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="theme-color" content="#e65100">
+<meta name="theme-color" content="#0f2b3c">
 <title>شركة نايف للأغذية | برنامج الولاء الرقمي</title>
 <link rel="icon" href="https://i.postimg.cc/NM2zJWZD/NAIF-LOGO.jpg" type="image/jpeg">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
 <style>
-:root{--orange:#e65100;--orange2:#f57c00;--gold:#ffb300;--ink:#1a1a1a;--muted:#687078;--bg:#f4f6f9;--card:#fff;--line:#e2e8f0;--green:#16845b;--red:#c62828;--shadow:0 10px 30px rgba(0,0,0,0.05);--radius:16px}
+:root{--orange:#e65100;--orange2:#f57c00;--gold:#ffb300;--ink:#1a1a1a;--muted:#687078;--bg:#f4f6f9;--card:#fff;--line:#e2e8f0;--green:#16845b;--red:#c62828;--petrol:#0f2b3c;--petrol-dark:#0a1e2b;--shadow:0 10px 30px rgba(0,0,0,0.06);--radius:16px}
 *{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font-family:Tahoma,Arial,sans-serif;font-size:14px}button,input,select,textarea{font:inherit}button{cursor:pointer;border:0}button:focus-visible,input:focus-visible,select:focus-visible{outline:3px solid #ffb30088;outline-offset:2px}
-.app{display:grid;grid-template-columns:260px 1fr;min-height:100vh}.sidebar{background:linear-gradient(165deg,#1e1c1a,#111);color:#fff;padding:24px 16px;position:sticky;top:0;height:100vh;display:flex;flex-direction:column;z-index:5}.brand{display:flex;align-items:center;gap:12px;padding:4px 8px 24px;border-bottom:1px solid rgba(255,255,255,0.1)}.brand-mark{width:46px;height:46px;border-radius:12px;background:#fff;display:grid;place-items:center;overflow:hidden;box-shadow:0 4px 12px rgba(0,0,0,0.3)}.brand-mark img{width:100%;height:100%;object-fit:cover}.brand b{font-size:16px}.brand small{display:block;color:#aaa;margin-top:3px}.nav{display:grid;gap:6px;margin-top:20px}.nav button{background:transparent;color:#cbd5e1;text-align:right;padding:12px 14px;border-radius:10px;display:flex;align-items:center;gap:12px;transition:.2s;font-weight:bold}.nav button:hover,.nav button.active{background:linear-gradient(90deg,rgba(230,81,0,0.3),rgba(245,124,0,0.3));color:#fff}.nav button.active{border-right:3px solid var(--gold)}.nav .ico{font-size:18px;width:22px;text-align:center}.side-foot{margin-top:auto;color:#888;font-size:11px;line-height:1.8;padding:12px}
-main{min-width:0}.topbar{height:76px;background:#fff;border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;padding:0 30px;position:sticky;top:0;z-index:4}.topbar h1{font-size:20px;margin:0}.top-actions{display:flex;align-items:center;gap:15px}.today{color:var(--muted);font-size:12px}.avatar{width:38px;height:38px;border-radius:50%;background:#fff;border:1px solid var(--line);overflow:hidden;display:grid;place-items:center}.avatar img{width:100%;height:100%;object-fit:cover}.content{padding:26px 30px;max-width:1600px;margin:auto}.page{display:none;animation:fade .25s ease}.page.active{display:block}@keyframes fade{from{opacity:0;transform:translateY(5px)}to{opacity:1;transform:none}}.page-head{display:flex;justify-content:space-between;align-items:center;gap:15px;margin-bottom:20px}.page-head h2{margin:0;font-size:21px}.page-head p{color:var(--muted);margin:7px 0 0}.btn{padding:10px 16px;border-radius:10px;background:var(--orange);color:white;font-weight:bold;transition:.2s}.btn:hover{background:#c84300;transform:translateY(-1px)}.btn.secondary{background:#fff;color:var(--ink);border:1px solid var(--line)}.btn.dark{background:var(--ink)}.btn.green{background:var(--green)}.btn.red{background:var(--red)}.btn.small{padding:6px 10px;font-size:12px}.btn:disabled{opacity:.45;cursor:not-allowed}.grid{display:grid;gap:16px}.metrics{grid-template-columns:repeat(4,minmax(0,1fr));margin-bottom:18px}.card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);padding:20px;min-width:0}.metric{display:flex;align-items:center;justify-content:space-between}.metric .label{color:var(--muted);font-size:12px}.metric strong{font-size:26px;display:block;margin-top:8px}.metric .symbol{width:44px;height:44px;border-radius:12px;background:#fff1e8;color:var(--orange);display:grid;place-items:center;font-size:20px}.subtle{color:var(--muted);font-size:12px}.two-col{grid-template-columns:1.15fr .85fr}.section-title{font-size:16px;margin:0 0 15px}.table-wrap{overflow:auto}table{border-collapse:collapse;width:100%;min-width:650px}th,td{padding:12px;text-align:right;border-bottom:1px solid #f1f5f9;white-space:nowrap}th{color:#64748b;font-size:12px;background:#f8fafc;font-weight:600}td{font-size:13px}tbody tr:hover{background:#fffaf6}.tag{display:inline-flex;padding:4px 10px;border-radius:30px;font-size:11px;font-weight:bold}.tag.active{background:#e6f5ed;color:#13754d}.tag.eligible{background:#fff3d7;color:#946000}.cashier-search{display:flex;gap:8px}.cashier-search input{flex:1}.customer-result{margin-top:15px}.action-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:15px}.action-grid button{min-height:80px;border-radius:12px;background:#fff5ed;border:1px solid #ffdec7;color:#a43a00;font-weight:bold;display:grid;place-items:center;gap:4px}.action-grid button span{font-size:22px}.modal-backdrop{position:fixed;inset:0;background:rgba(0,0,0,0.5);z-index:20;display:none;place-items:center;padding:18px}.modal-backdrop.show{display:grid}.modal{background:#fff;border-radius:18px;width:min(520px,100%);padding:24px;box-shadow:0 20px 60px rgba(0,0,0,0.15);max-height:90vh;overflow:auto}.modal-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:16px}.modal-head h3{margin:0}.close{background:#f1f5f9;border-radius:8px;width:32px;height:32px;font-size:18px}.modal-actions{display:flex;gap:8px;margin-top:18px}.toast{position:fixed;bottom:24px;left:24px;background:#1e293b;color:#fff;padding:12px 20px;border-radius:12px;box-shadow:0 10px 25px rgba(0,0,0,0.2);z-index:50;opacity:0;transform:translateY(10px);transition:.25s;pointer-events:none}.toast.show{opacity:1;transform:none}.qr-box{width:220px;height:220px;margin:15px auto;background:#fff;border:1px solid #ddd;border-radius:12px;display:grid;place-items:center;padding:10px;overflow:hidden}.qr-box img{width:100%;height:100%;object-fit:contain}.empty{padding:30px;text-align:center;color:#888}.customer-name{font-weight:bold}
-.form-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.field{display:grid;gap:6px}.field label{font-size:12px;color:#475569;font-weight:bold}.field input,.field select{width:100%;padding:10px 12px;border:1px solid #cbd5e1;border-radius:10px;background:#fff}
 
-/* شاشة تسجيل دخول احترافية */
-.login-cover{position:fixed;inset:0;background:linear-gradient(135deg,#0f172a,#1e293b);z-index:100;display:none;place-items:center;padding:20px}
+.app{display:grid;grid-template-columns:260px 1fr;min-height:100vh}
+.sidebar{background:linear-gradient(165deg, var(--petrol), var(--petrol-dark));color:#fff;padding:24px 16px;position:sticky;top:0;height:100vh;display:flex;flex-direction:column;z-index:5;box-shadow:3px 0 15px rgba(0,0,0,0.1)}
+.brand{display:flex;align-items:center;gap:12px;padding:4px 8px 24px;border-bottom:1px solid rgba(255,255,255,0.12)}
+.brand-mark{width:46px;height:46px;border-radius:12px;background:#fff;display:grid;place-items:center;overflow:hidden;box-shadow:0 4px 12px rgba(0,0,0,0.3)}
+.brand-mark img{width:100%;height:100%;object-fit:cover}.brand b{font-size:16px}.brand small{display:block;color:#cbd5e1;margin-top:3px}
+.nav{display:grid;gap:6px;margin-top:20px}
+.nav button{background:transparent;color:#e2e8f0;text-align:right;padding:12px 14px;border-radius:10px;display:flex;align-items:center;gap:12px;transition:.2s;font-weight:bold}
+.nav button:hover,.nav button.active{background:linear-gradient(90deg, rgba(230,81,0,0.35), rgba(245,124,0,0.25));color:#fff}
+.nav button.active{border-right:4px solid var(--gold);background:rgba(255,255,255,0.08)}
+.nav .ico{font-size:18px;width:22px;text-align:center}.side-foot{margin-top:auto;color:#94a3b8;font-size:11px;line-height:1.8;padding:12px}
+
+main{min-width:0}.topbar{height:76px;background:#fff;border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;padding:0 30px;position:sticky;top:0;z-index:4}
+.topbar h1{font-size:20px;margin:0;color:var(--petrol)}.top-actions{display:flex;align-items:center;gap:15px}.today{color:var(--muted);font-size:12px}
+.avatar{width:38px;height:38px;border-radius:50%;background:#fff;border:1px solid var(--line);overflow:hidden;display:grid;place-items:center}.avatar img{width:100%;height:100%;object-fit:cover}
+.content{padding:26px 30px;max-width:1600px;margin:auto}.page{display:none;animation:fade .25s ease}.page.active{display:block}@keyframes fade{from{opacity:0;transform:translateY(5px)}to{opacity:1;transform:none}}
+.page-head{display:flex;justify-content:space-between;align-items:center;gap:15px;margin-bottom:20px}.page-head h2{margin:0;font-size:21px;color:var(--petrol)}.page-head p{color:var(--muted);margin:7px 0 0}
+.btn{padding:10px 16px;border-radius:10px;background:var(--orange);color:white;font-weight:bold;transition:.2s}.btn:hover{background:#c84300;transform:translateY(-1px)}.btn.secondary{background:#fff;color:var(--ink);border:1px solid var(--line)}.btn.dark{background:var(--petrol);color:#fff}.btn.green{background:var(--green)}.btn.red{background:var(--red)}.btn.small{padding:6px 10px;font-size:12px}
+.grid{display:grid;gap:16px}.metrics{grid-template-columns:repeat(4,minmax(0,1fr));margin-bottom:18px}.card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);padding:20px;min-width:0}
+.metric{display:flex;align-items:center;justify-content:space-between}.metric .label{color:var(--muted);font-size:12px}.metric strong{font-size:26px;display:block;margin-top:8px;color:var(--petrol)}.metric .symbol{width:44px;height:44px;border-radius:12px;background:#fff1e8;color:var(--orange);display:grid;place-items:center;font-size:20px}
+.subtle{color:var(--muted);font-size:12px}.two-col{grid-template-columns:1.15fr .85fr}.section-title{font-size:16px;margin:0 0 15px;color:var(--petrol)}.table-wrap{overflow:auto}table{border-collapse:collapse;width:100%;min-width:650px}th,td{padding:12px;text-align:right;border-bottom:1px solid #f1f5f9;white-space:nowrap}th{color:#64748b;font-size:12px;background:#f8fafc;font-weight:600}td{font-size:13px}tbody tr:hover{background:#fffaf6}
+.tag{display:inline-flex;padding:4px 10px;border-radius:30px;font-size:11px;font-weight:bold}.tag.active{background:#e6f5ed;color:#13754d}.tag.eligible{background:#fff3d7;color:#946000}.tag.risk{background:#ffebeb;color:#c62828}
+.heatmap{display:grid;grid-template-columns:72px repeat(6,minmax(35px,1fr));gap:5px;align-items:center;font-size:11px}.heatmap .cell{height:31px;border-radius:6px;display:grid;place-items:center;color:#4a3525;font-weight:bold}.heatmap .head{color:var(--muted);text-align:center}.heatmap .day{font-weight:bold;color:var(--petrol)}
+.heat-1{background:#fff2df}.heat-2{background:#ffddb0}.heat-3{background:#ffbd70}.heat-4{background:#ff9940}.heat-5{background:#ed6b16;color:#fff!important}.heat-6{background:#bd4300;color:#fff!important}
+
+.cashier-search{display:flex;gap:8px}.cashier-search input{flex:1}.customer-result{margin-top:15px}.action-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:15px}.action-grid button{min-height:80px;border-radius:12px;background:#fff5ed;border:1px solid #ffdec7;color:#a43a00;font-weight:bold;display:grid;place-items:center;gap:4px}.action-grid button span{font-size:22px}
+.modal-backdrop{position:fixed;inset:0;background:rgba(0,0,0,0.5);z-index:20;display:none;place-items:center;padding:18px}.modal-backdrop.show{display:grid}.modal{background:#fff;border-radius:18px;width:min(520px,100%);padding:24px;box-shadow:0 20px 60px rgba(0,0,0,0.15);max-height:90vh;overflow:auto}.modal-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:16px}.modal-head h3{margin:0;color:var(--petrol)}.close{background:#f1f5f9;border-radius:8px;width:32px;height:32px;font-size:18px}.modal-actions{display:flex;gap:8px;margin-top:18px}
+.toast{position:fixed;bottom:24px;left:24px;background:#1e293b;color:#fff;padding:12px 20px;border-radius:12px;box-shadow:0 10px 25px rgba(0,0,0,0.2);z-index:50;opacity:0;transform:translateY(10px);transition:.25s;pointer-events:none}.toast.show{opacity:1;transform:none}
+.qr-box{width:220px;height:220px;margin:15px auto;background:#fff;border:1px solid #ddd;border-radius:12px;display:grid;place-items:center;padding:10px;overflow:hidden}.qr-box img{width:100%;height:100%;object-fit:contain}.empty{padding:30px;text-align:center;color:#888}.customer-name{font-weight:bold}
+.form-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.field{display:grid;gap:6px}.field label{font-size:12px;color:#475569;font-weight:bold}.field input,.field select,.field textarea{width:100%;padding:10px 12px;border:1px solid #cbd5e1;border-radius:10px;background:#fff}.inline{display:flex;gap:8px;align-items:center}
+
+/* تصميم البطاقة الأصلي تماماً (Wallet Pass Style) */
+.builder-layout{display:grid;grid-template-columns:1.2fr .8fr;gap:20px;align-items:start}
+.wallet-stage{background:linear-gradient(135deg,#f8fafc,#e2e8f0);border-radius:20px;padding:30px;display:grid;place-items:center}
+.phone{width:310px;background:#fff;border-radius:30px;box-shadow:0 20px 40px rgba(0,0,0,0.12);overflow:hidden;border:7px solid #1e293b}
+.pass-header-preview{background:linear-gradient(135deg,#e65100,#ffb300);color:#fff;padding:20px;text-align:center}
+.pass-body-preview{padding:20px}
+.stamp-grid-preview{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:15px 0}
+.stamp-cell{width:50px;height:50px;border:2px dashed #cbd5e1;border-radius:50%;display:grid;place-items:center;font-size:20px;background:#fafafa;margin:auto}
+.stamp-cell.filled{background:#fff3ec;border:2px solid #e65100;color:#e65100}
+
+/* شاشة تسجيل الدخول */
+.login-cover{position:fixed;inset:0;background:linear-gradient(135deg, var(--petrol-dark), #0f172a);z-index:99999;display:none;place-items:center;padding:20px}
 .login-cover.show{display:grid}
-.login-card{background:#fff;width:min(440px,100%);padding:35px 30px;border-radius:24px;box-shadow:0 25px 60px rgba(0,0,0,0.3);position:relative;overflow:hidden}
+.login-card{background:#fff;width:min(440px,100%);padding:35px 30px;border-radius:24px;box-shadow:0 25px 60px rgba(0,0,0,0.3);position:relative;overflow:hidden;z-index:100000}
 .login-card:before{content:"";position:absolute;top:0;left:0;right:0;height:6px;background:linear-gradient(90deg,var(--orange),var(--gold))}
 </style>
 </head>
@@ -48,7 +85,7 @@ main{min-width:0}.topbar{height:76px;background:#fff;border-bottom:1px solid var
   </div>
  </header>
  <div class="content">
-  <!-- PAGE: DASHBOARD -->
+  <!-- PAGE 1: DASHBOARD -->
   <section class="page active" id="page-dashboard">
    <div class="page-head"><div><h2>نظرة عامة على برنامج الولاء</h2><p>تابع تفاعل العملاء وأداء المكافآت في فروع شركة نايف للأغذية.</p></div><button class="btn" onclick="showPage('cashier')">＋ تسجيل زيارة جديدة</button></div>
    <div class="grid metrics">
@@ -57,27 +94,71 @@ main{min-width:0}.topbar{height:76px;background:#fff;border-bottom:1px solid var
     <div class="card metric"><div><div class="label">الأختام المضافة</div><strong id="stampsIssued">0</strong><div class="subtle">إجمالي الأختام المسجلة</div></div><div class="symbol">✦</div></div>
     <div class="card metric"><div><div class="label">معدل استبدال المكافآت</div><strong id="claimRate">0%</strong><div class="subtle">من المكافآت المستحقة</div></div><div class="symbol">🎁</div></div>
    </div>
+   <div class="grid two-col">
+    <div class="card"><h3 class="section-title">أوقات الذروة حسب أيام الأسبوع في فروع نايف</h3><div class="heatmap" id="heatmap"></div><div class="subtle" style="margin-top:12px">مؤشر توضيحي لكثافة زيارات الفروع خلال ساعات اليوم.</div></div>
+    <div class="card"><h3 class="section-title">تنبيهات العملاء المعرضين للانقطاع</h3><div class="table-wrap"><table><thead><tr><th>العميل</th><th>آخر زيارة</th><th>الأختام</th><th>إجراء</th></tr></thead><tbody id="riskRows"></tbody></table></div></div>
+   </div>
   </section>
 
-  <!-- PAGE: BUILDER -->
+  <!-- PAGE 2: BUILDER (التصميم الأصلي تماماً) -->
   <section class="page" id="page-builder">
-   <div class="page-head"><div><h2>مصمم بطاقة الولاء</h2><p>عدّل شكل البطاقة وشاهد النتيجة مباشرة.</p></div><button class="btn" onclick="saveSettings()">حفظ تصميم البطاقة</button></div>
-   <div class="grid builder-layout">
-    <div class="card"><h3 class="section-title">إعدادات البطاقة</h3>
+   <div class="page-head"><div><h2>مصمم بطاقة الولاء (الشكل الأصلي)</h2><p>عدّل شكل بطاقة العميل وشاهد المعاينة فوراً.</p></div><button class="btn" onclick="saveSettings()">حفظ تصميم البطاقة</button></div>
+   <div class="builder-layout">
+    <div class="card"><h3 class="section-title">إعدادات البطاقة الرقمية</h3>
      <div class="form-grid">
-      <div class="field"><label>اسم العلامة</label><input id="logoText" value="شركة نايف للأغذية"></div>
-      <div class="field"><label>اسم الفرع الافتراضي</label><input id="branchName" value="جميع فروع نايف"></div>
-      <div class="field full"><label>عنوان البطاقة</label><input id="passHeader" value="بطاقة مكافآت نايف الرقمية"></div>
+      <div class="field"><label>اسم العلامة التجارية</label><input id="logoText" value="شركة نايف للأغذية" oninput="renderPassPreview()"></div>
+      <div class="field"><label>اسم الفرع الافتراضي</label><input id="branchName" value="جميع فروع نايف" oninput="renderPassPreview()"></div>
+      <div class="field full"><label>عنوان البطاقة الرئيسي</label><input id="passHeader" value="بطاقة مكافآت نايف الرقمية" oninput="renderPassPreview()"></div>
       <div class="field"><label>عدد الأختام للمكافأة</label><input id="stampGoal" type="number" value="8" readonly></div>
-      <div class="field"><label>رمز الختم</label><select id="stampIcon"><option value="🍗">دجاجة</option><option value="🍔">برجر</option><option value="⭐">نجمة</option></select></div>
+      <div class="field"><label>أيقونة الختم</label><select id="stampIcon" onchange="renderPassPreview()"><option value="🍗">دجاجة</option><option value="🍔">برجر</option><option value="⭐">نجمة</option></select></div>
+     </div>
+    </div>
+    <div class="card"><h3 class="section-title">معاينة بطاقة العميل الحية</h3>
+     <div class="wallet-stage">
+      <div class="phone">
+       <div class="pass-header-preview">
+        <img src="https://i.postimg.cc/NM2zJWZD/NAIF-LOGO.jpg" style="width:45px;height:45px;border-radius:10px;object-fit:cover;background:#fff;padding:2px;margin-bottom:6px">
+        <div id="prevHeader" style="font-weight:bold;font-size:16px">بطاقة مكافآت نايف الرقمية</div>
+        <div id="prevBranch" style="font-size:12px;opacity:0.9">جميع فروع نايف</div>
+       </div>
+       <div class="pass-body-preview">
+        <div style="display:flex;justify-content:space-between;font-size:12px;font-weight:bold"><span>الأختام المجمعة</span><span style="color:#e65100">6 / 8</span></div>
+        <div class="stamp-grid-preview" id="prevGrid"></div>
+        <div style="background:#fff3ec;padding:10px;border-radius:10px;text-align:center;font-size:12px;color:#a43a00;font-weight:bold">وجبة نايف مجانية من اختيارك</div>
+       </div>
+      </div>
      </div>
     </div>
    </div>
   </section>
 
-  <!-- PAGE: CASHIER -->
+  <!-- PAGE 3: LIFECYCLE -->
+  <section class="page" id="page-lifecycle">
+   <div class="page-head"><div><h2>محرك التواصل والتنبيهات الآلية</h2><p>اختبر سيناريوهات الإشعارات الفورية وتنبيهات الموقع للعملاء.</p></div></div>
+   <div class="grid two-col">
+    <div class="card"><h3 class="section-title">محاكاة التنبيهات الذكية</h3>
+     <div style="display:grid;gap:10px">
+      <div style="display:flex;gap:10px;padding:12px;background:#fafafa;border-radius:12px;border:1px solid var(--line)"><div style="font-size:20px">📍</div><div><b>تنبيه القرب من الفرع</b><p style="margin:4px 0 8px;font-size:12px;color:#666">إشعار تلقائي عند اقتراب العميل من أحد فروع نايف.</p><button class="btn small" onclick="simulateNotice('geo')">تشغيل المحاكاة</button></div></div>
+      <div style="display:flex;gap:10px;padding:12px;background:#fafafa;border-radius:12px;border:1px solid var(--line)"><div style="font-size:20px">🍗</div><div><b>شكر بعد الزيارة</b><p style="margin:4px 0 8px;font-size:12px;color:#666">رسالة شكر فورية بعد إضافة ختم جديد.</p><button class="btn small" onclick="simulateNotice('thanks')">عرض الإشعار</button></div></div>
+      <div style="display:flex;gap:10px;padding:12px;background:#fafafa;border-radius:12px;border:1px solid var(--line)"><div style="font-size:20px">🎁</div><div><b>تذكير المكافأة المنسية</b><p style="margin:4px 0 8px;font-size:12px;color:#666">تنبيه العميل الذي أكمل الأختام ولم يستبدل الوجبة بعد.</p><button class="btn small" onclick="simulateNotice('reward')">تشغيل المحاكاة</button></div></div>
+     </div>
+    </div>
+    <div class="card"><h3 class="section-title">معاينة إشعار هاتف العميل</h3>
+     <div style="background:linear-gradient(135deg,var(--petrol-dark),#334155);padding:22px;border-radius:22px;color:#fff;min-height:250px">
+      <div style="font-size:11px;opacity:.7">17:42  ◉ ▮▮▮</div>
+      <div style="margin-top:40px;background:#ffffffed;color:#222;border-radius:15px;padding:15px">
+       <div style="font-size:11px;color:#666">NAIF FOOD • الآن</div>
+       <b id="notificationTitle" style="display:block;margin:9px 0">أهلاً بك في نايف</b>
+       <span id="notificationBody" style="font-size:12px;line-height:1.7">اختر أحد السيناريوهات لعرض الإشعار الترحيبي.</span>
+      </div>
+     </div>
+    </div>
+   </div>
+  </section>
+
+  <!-- PAGE 4: CASHIER -->
   <section class="page" id="page-cashier">
-   <div class="page-head"><div><h2>نقطة الكاشير (الفروع)</h2><p>ابحث عن العميل بالحرف (الاسم أو رقم الهاتف أو رقم البطاقة).</p></div><button class="btn secondary" onclick="openQr()">عرض QR التسجيل</button></div>
+   <div class="page-head"><div><h2>نقطة الكاشير (الفروع)</h2><p>ابحث عن العميل بالحرف لتسجيل الأختام برقم الفاتورة الإلزامي.</p></div><button class="btn secondary" onclick="openQr()">عرض QR التسجيل</button></div>
    <div class="card">
     <div class="cashier-search">
      <input class="search" id="cashierSearch" placeholder="ابحث بالحرف (اكتب اسم العميل أو الهاتف)..." oninput="findCashierCustomerLive()" aria-label="بحث">
@@ -88,20 +169,33 @@ main{min-width:0}.topbar{height:76px;background:#fff;border-bottom:1px solid var
    <div class="card" style="margin-top:16px"><h3 class="section-title">إضافة عميل جديد</h3><div class="form-grid"><div class="field"><label>اسم العميل</label><input id="newName" placeholder="اسم العميل"></div><div class="field"><label>رقم الهاتف (الكويت)</label><input id="newPhone" placeholder="965XXXXXXXX" inputmode="tel"></div></div><div style="margin-top:12px"><button class="btn" onclick="addCustomer()">＋ إنشاء بطاقة عميل</button></div></div>
   </section>
 
-  <!-- PAGE: USERS (Yasser Only) -->
+  <!-- PAGE 5: CUSTOMERS -->
+  <section class="page" id="page-customers">
+   <div class="page-head"><div><h2>إدارة العملاء والحملات</h2><p>قاعدة بيانات العملاء والتواصل المباشر مع الشرائح.</p></div><button class="btn" onclick="openCampaign()">إنشاء حملة تسويقية</button></div>
+   <div class="card">
+    <div class="inline" style="justify-content:space-between;margin-bottom:14px">
+     <input id="customerSearch" class="search" style="max-width:340px" placeholder="ابحث بالاسم أو الهاتف بالحرف..." oninput="renderCustomersTable()">
+     <span class="subtle" id="customerCount"></span>
+    </div>
+    <div class="table-wrap">
+     <table>
+      <thead>
+       <tr><th>العميل</th><th>رقم الهاتف</th><th>الفرع المسجل</th><th>رقم البطاقة</th><th>الأختام</th><th>الحالة</th><th>آخر زيارة</th><th>الإجراءات</th></tr>
+      </thead>
+      <tbody id="customerRows"></tbody>
+     </table>
+    </div>
+   </div>
+  </section>
+
+  <!-- PAGE 6: USERS -->
   <section class="page" id="page-users">
-   <div class="page-head"><div><h2>إدارة المستخدمين وفروع نايف</h2><p>لوحة التحكم الخاصة بمدير النظام (Yasser) لإدارة كلمات المرور وتحديثها.</p></div><button class="btn" onclick="addNewBranchUserModal()">＋ إضافة فرع جديد</button></div>
+   <div class="page-head"><div><h2>إدارة فروع ومستخدمي نايف</h2><p>لوحة التحكم الخاصة بمدير النظام (Yasser) لإدارة كلمات المرور وتحديثها.</p></div><button class="btn" onclick="addNewBranchUserModal()">＋ إضافة فرع جديد</button></div>
    <div class="card">
     <div class="table-wrap">
      <table>
       <thead>
-       <tr>
-        <th>اسم الفرع / المطعم</th>
-        <th>اسم المستخدم (Login)</th>
-        <th>كلمة المرور الحالية</th>
-        <th>آخر تحديث</th>
-        <th>الإجراءات</th>
-       </tr>
+       <tr><th>اسم الفرع / المطعم</th><th>اسم المستخدم (Login)</th><th>كلمة المرور الحالية</th><th>آخر تحديث</th><th>الإجراءات</th></tr>
       </thead>
       <tbody id="branchUsersTableBody"></tbody>
      </table>
@@ -109,10 +203,24 @@ main{min-width:0}.topbar{height:76px;background:#fff;border-bottom:1px solid var
    </div>
   </section>
 
-  <!-- PAGE: REPORTS -->
+  <!-- PAGE 7: REPORTS -->
   <section class="page" id="page-reports">
-   <div class="page-head"><div><h2>تقارير الولاء والأداء</h2><p>تصدير التقارير بصيغة PDF احترافية.</p></div><button class="btn green" onclick="generateAndExportPDF()">📥 تصدير التقرير PDF</button></div>
-   <div class="card"><div id="reportMetricsSummary" class="grid metrics" style="margin-bottom:15px"></div><div class="table-wrap"><table><thead><tr><th>رقم البطاقة</th><th>اسم العميل</th><th>الهاتف</th><th>الفرع المسجل</th><th>الأختام</th><th>الزيارات</th><th>المكافآت</th></tr></thead><tbody id="reportTableBody"></tbody></table></div></div>
+   <div class="page-head"><div><h2>تقارير الولاء والأداء المالية</h2><p>تصدير التقارير بصيغة PDF احترافية ومتابعة الأداء المالي والولاء.</p></div><button class="btn green" onclick="generateAndExportPDF()">📥 تصدير التقرير PDF</button></div>
+   <div class="card"><div id="reportMetricsSummary" class="grid metrics" style="margin-bottom:15px"></div><div class="table-wrap"><table><thead><tr><th>رقم البطاقة</th><th>اسم العميل</th><th>الهاتف</th><th>الفرع المسجل</th><th>الأختام</th><th>الزيارات</th><th>المكافآت المستبدلة</th></tr></thead><tbody id="reportTableBody"></tbody></table></div></div>
+  </section>
+
+  <!-- PAGE 8: AUDIT -->
+  <section class="page" id="page-audit">
+   <div class="page-head"><div><h2>سجل العمليات وفاتورة التدقيق</h2><p>متابعة كافة عمليات الأختام، أرقام الفواتير، الاستبدال، وإنشاء العملاء.</p></div><button class="btn secondary" onclick="exportAudit()">تصدير السجل CSV</button></div>
+   <div class="card">
+    <div class="inline" style="justify-content:space-between;margin-bottom:14px"><span class="subtle" id="auditCount">0 عملية</span><button class="btn small secondary" onclick="renderAudit()">تحديث</button></div>
+    <div class="table-wrap">
+     <table>
+      <thead><tr><th>التاريخ والوقت</th><th>المستخدم / الفرع</th><th>العملية</th><th>رقم الفاتورة</th><th>التفاصيل</th></tr></thead>
+      <tbody id="auditRows"></tbody>
+     </table>
+    </div>
+   </div>
   </section>
  </div>
 </main>
@@ -122,32 +230,32 @@ main{min-width:0}.topbar{height:76px;background:#fff;border-bottom:1px solid var
 <div class="modal-backdrop" id="modalBackdrop"><div class="modal"><div class="modal-head"><h3 id="modalTitle">تفاصيل</h3><button class="close" onclick="closeModal()">×</button></div><div id="modalBody"></div><div class="modal-actions" id="modalActions"></div></div></div>
 <div class="toast" id="toast"></div>
 
-<!-- SHINING PROFESSIONAL LOGIN COVER -->
+<!-- LOGIN COVER -->
 <div class="login-cover show" id="loginCover">
  <div class="login-card">
   <div style="text-align:center;margin-bottom:20px">
    <img src="https://i.postimg.cc/NM2zJWZD/NAIF-LOGO.jpg" style="width:70px;height:70px;border-radius:16px;object-fit:cover;box-shadow:0 8px 20px rgba(0,0,0,0.15)">
-   <h2 style="margin:12px 0 4px;font-size:22px;color:#1e293b">شركة نايف للأغذية</h2>
+   <h2 style="margin:12px 0 4px;font-size:22px;color:var(--petrol)">شركة نايف للأغذية</h2>
    <p style="margin:0;font-size:12px;color:#64748b">نظام إدارة الولاء الرقمي الموحد</p>
   </div>
   <div class="field" style="margin-top:15px">
-   <label>اسم المستخدم / الفرع</label>
-   <input id="loginUser" placeholder="مثال: avenues أو Yasser" onkeydown="handleLoginKeydown(event)">
+   <label style="font-weight:bold;color:#0f2b3c">اسم المستخدم / الفرع</label>
+   <input id="loginUser" list="branchUserSuggestions" placeholder="اكتب اسم الفرع أو المستخدم..." autocomplete="off" style="padding:12px;border:1px solid #cbd5e1;border-radius:10px;font-size:14px">
+   <datalist id="branchUserSuggestions"></datalist>
   </div>
   <div class="field" style="margin-top:14px">
-   <label>كلمة المرور</label>
-   <input id="loginPass" type="password" placeholder="••••••" onkeydown="handleLoginKeydown(event)">
+   <label style="font-weight:bold;color:#0f2b3c">كلمة المرور</label>
+   <input id="loginPass" type="password" placeholder="أدخل كلمة المرور..." style="padding:12px;border:1px solid #cbd5e1;border-radius:10px;font-size:14px;background:#fff">
   </div>
-  <button class="btn" style="width:100%;margin-top:20px;padding:12px;font-size:15px" onclick="executeSystemLogin()">دخول النظام</button>
+  <button class="btn" style="width:100%;margin-top:20px;padding:12px;font-size:15px;background:var(--orange)" onclick="executeSystemLogin()">دخول النظام</button>
   <div id="loginError" style="color:#ef4444;font-size:12px;text-align:center;margin-top:12px;font-weight:bold"></div>
  </div>
 </div>
 
 <script>
 'use strict';
-const STORE_KEY='naifLoyalty.v3';
+const STORE_KEY='naifLoyalty.v9';
 
-// جميع فروع ومطاعم شركة نايف المستخرجة من ملف الـ Excel المرفق
 const fullNaifBranches = [
   {name: "مدير النظام العام", username: "Yasser", pass: "123", role: "admin", updated: "2026-03-01"},
   {name: "مول 360", username: "360mall", pass: "123", role: "cashier", updated: "2026-03-01"},
@@ -156,68 +264,14 @@ const fullNaifBranches = [
   {name: "شرق الاحمدي", username: "ahmadiind", pass: "123", role: "cashier", updated: "2026-03-01"},
   {name: "المطار", username: "airport", pass: "123", role: "cashier", updated: "2026-03-01"},
   {name: "الري", username: "alrai", pass: "123", role: "cashier", updated: "2026-03-01"},
-  {name: "الري -2", username: "alrai2", pass: "123", role: "cashier", updated: "2026-03-01"},
-  {name: "مجمع الكوت", username: "alkout", pass: "123", role: "cashier", updated: "2026-03-01"},
   {name: "مجمع الافنيوز", username: "avenues", pass: "123", role: "cashier", updated: "2026-03-01"},
-  {name: "الضباعية", username: "dabaya", pass: "123", role: "cashier", updated: "2026-03-01"},
-  {name: "الدسمة وبنيد القار", username: "dasma", pass: "123", role: "cashier", updated: "2026-03-01"},
-  {name: "الفحاحيل", username: "fahaheel", pass: "123", role: "cashier", updated: "2026-03-01"},
-  {name: "الفحيحيل -2", username: "fahaheel2", pass: "123", role: "cashier", updated: "2026-03-01"},
-  {name: "الفيحاء", username: "faiha", pass: "123", role: "cashier", updated: "2026-03-01"},
   {name: "الفروانية", username: "farwaniya", pass: "123", role: "cashier", updated: "2026-03-01"},
-  {name: "الفنطاس", username: "fintas", pass: "123", role: "cashier", updated: "2026-03-01"},
-  {name: "هدية", username: "hadiya", pass: "123", role: "cashier", updated: "2026-03-01"},
-  {name: "هدية -2", username: "hadiya2", pass: "123", role: "cashier", updated: "2026-03-01"},
-  {name: "حولي الترفيهي", username: "hawallypark", pass: "123", role: "cashier", updated: "2026-03-01"},
-  {name: "جمعية مدينة جابر الأحمد", username: "jaberalahmad", pass: "123", role: "cashier", updated: "2026-03-01"},
-  {name: "الجابرية تكا و فرايد", username: "jabriya1", pass: "123", role: "cashier", updated: "2026-03-01"},
-  {name: "الجابرية بنت الديك", username: "jabriya2", pass: "123", role: "cashier", updated: "2026-03-01"},
+  {name: "السندباد - السلوى", username: "salmiya", pass: "123", role: "cashier", updated: "2026-03-01"},
   {name: "الجهراء الصناعية", username: "jahraind", pass: "123", role: "cashier", updated: "2026-03-01"},
-  {name: "الجهراء - ليالي الشرق", username: "jahraeast", pass: "123", role: "cashier", updated: "2026-03-01"},
-  {name: "الجهراء - مجمع مكة", username: "jahramecca", pass: "123", role: "cashier", updated: "2026-03-01"},
-  {name: "الجهراء الزويخ", username: "jahrazuwaikh", pass: "123", role: "cashier", updated: "2026-03-01"},
-  {name: "سوق الجليب", username: "julaib", pass: "123", role: "cashier", updated: "2026-03-01"},
-  {name: "كبد", username: "kabd", pass: "123", role: "cashier", updated: "2026-03-01"},
-  {name: "الخيران أويا", username: "khairanoya", pass: "123", role: "cashier", updated: "2026-03-01"},
+  {name: "مجمع الكوت", username: "alkout", pass: "123", role: "cashier", updated: "2026-03-01"},
   {name: "الخيران أوتليت", username: "khairan", pass: "123", role: "cashier", updated: "2026-03-01"},
-  {name: "خيطان العصيمي", username: "khaitan", pass: "123", role: "cashier", updated: "2026-03-01"},
-  {name: "الخيول", username: "khuyool", pass: "123", role: "cashier", updated: "2026-03-01"},
-  {name: "المنقف", username: "mangaf", pass: "123", role: "cashier", updated: "2026-03-01"},
-  {name: "مارينا مول - عالم المارينا", username: "marinamall", pass: "123", role: "cashier", updated: "2026-03-01"},
-  {name: "مشرف", username: "mishref", pass: "123", role: "cashier", updated: "2026-03-01"},
-  {name: "العارضية الحرفية", username: "ardhiya", pass: "123", role: "cashier", updated: "2026-03-01"},
-  {name: "الفروانية فرع 2", username: "farwaniya2", pass: "123", role: "cashier", updated: "2026-03-01"},
-  {name: "القادسية", username: "qadsiya", pass: "123", role: "cashier", updated: "2026-03-01"},
-  {name: "جمعية القيروان", username: "qairawan", pass: "123", role: "cashier", updated: "2026-03-01"},
-  {name: "جمعية العدان والقصور", username: "adan", pass: "123", role: "cashier", updated: "2026-03-01"},
-  {name: "الرقعي", username: "riggae", pass: "123", role: "cashier", updated: "2026-03-01"},
-  {name: "الرحاب", username: "rehab", pass: "123", role: "cashier", updated: "2026-03-01"},
-  {name: "الرقة", username: "daqqa", pass: "123", role: "cashier", updated: "2026-03-01"},
-  {name: "مدينة سعد العبد الله", username: "saad", pass: "123", role: "cashier", updated: "2026-03-01"},
-  {name: "مدينة صباح الاحمد", username: "sabahahmad", pass: "123", role: "cashier", updated: "2026-03-01"},
-  {name: "صباح السالم", username: "sabahsalem", pass: "123", role: "cashier", updated: "2026-03-01"},
-  {name: "صباح السالم - العرين", username: "sabahsalemareen", pass: "123", role: "cashier", updated: "2026-03-01"},
-  {name: "صباح السالم العرين -2", username: "sabahsalemareen2", pass: "123", role: "cashier", updated: "2026-03-01"},
-  {name: "النافورة", username: "nafoura", pass: "123", role: "cashier", updated: "2026-03-01"},
-  {name: "السندباد", username: "sindbad", pass: "123", role: "cashier", updated: "2026-03-01"},
-  {name: "شارع البحرين", username: "bahrain", pass: "123", role: "cashier", updated: "2026-03-01"},
-  {name: "سيد ياسين", username: "seidyaseen", pass: "123", role: "cashier", updated: "2026-03-01"},
-  {name: "سيد ياسين -2", username: "seidyaseen2", pass: "123", role: "cashier", updated: "2026-03-01"},
-  {name: "سلوى", username: "salwa", pass: "123", role: "cashier", updated: "2026-03-01"},
-  {name: "الشرق", username: "sharq", pass: "123", role: "cashier", updated: "2026-03-01"},
-  {name: "الشرق -2", username: "sharq2", pass: "123", role: "cashier", updated: "2026-03-01"},
-  {name: "جمعية الشهداء", username: "shuhada", pass: "123", role: "cashier", updated: "2026-03-01"},
-  {name: "الشويخ واره", username: "shuwaikh", pass: "123", role: "cashier", updated: "2026-03-01"},
-  {name: "اسواق القرين", username: "souqqurain", pass: "123", role: "cashier", updated: "2026-03-01"},
-  {name: "أسواق القرين -2", username: "souqqurain2", pass: "123", role: "cashier", updated: "2026-03-01"},
-  {name: "جمعية الصليبية", username: "sulaibiya", pass: "123", role: "cashier", updated: "2026-03-01"},
-  {name: "جمعية الصليبية -2", username: "sulaibiya2", pass: "123", role: "cashier", updated: "2026-03-01"},
-  {name: "نادي الصليبخات", username: "sulaibikhatclub", pass: "123", role: "cashier", updated: "2026-03-01"},
-  {name: "الصليبخات -2", username: "sulaibikhat2", pass: "123", role: "cashier", updated: "2026-03-01"},
-  {name: "جمعية الوفرة", username: "wafra", pass: "123", role: "cashier", updated: "2026-03-01"},
-  {name: "غرب أبو فطيرة الحرفية", username: "westabufatira", pass: "123", role: "cashier", updated: "2026-03-01"},
-  {name: "جمعية الزهراء التعاونية", username: "zahraa", pass: "123", role: "cashier", updated: "2026-03-01"},
-  {name: "خيطان شارع المطار", username: "khaitanairport", pass: "123", role: "cashier", updated: "2026-03-01"}
+  {name: "مارينا مول", username: "marinamall", pass: "123", role: "cashier", updated: "2026-03-01"},
+  {name: "أسواق القرين", username: "souqqurain", pass: "123", role: "cashier", updated: "2026-03-01"}
 ];
 
 const defaults = {
@@ -226,12 +280,9 @@ const defaults = {
     {id:'NF-1001', name:'أحمد محمد', phone:'96555501234', branch:'مول 360', stamps:6, visits:8, lastVisit:'2026-03-01', redeemed:1, history:[]},
     {id:'NF-1002', name:'سارة علي', phone:'96566602345', branch:'مجمع الافنيوز', stamps:8, visits:11, lastVisit:'2026-03-01', redeemed:2, history:[]}
   ],
-  users: fullNaifBranches
+  users: fullNaifBranches,
+  activity: [{at: new Date().toISOString(), user: 'Yasser', action: 'تسجيل دخول', invoice: '—', details: 'دخول مدير النظام'}]
 };
-
-let state = loadState();
-let currentUser = null;
-let selectedBranchFilter = 'all';
 
 function loadState(){
   try{
@@ -240,157 +291,316 @@ function loadState(){
   }catch(e){}
   return structuredClone(defaults);
 }
-function persist(){
-  localStorage.setItem(STORE_KEY, JSON.stringify(state));
-}
+function persist(){ localStorage.setItem(STORE_KEY, JSON.stringify(state)); }
 function toast(msg){
   const t=document.getElementById('toast');t.textContent=msg;t.classList.add('show');
   setTimeout(()=>t.classList.remove('show'),2600);
 }
 function esc(s){return String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
 
-/* -------------------------------------------------------------
-   نظام الدخول بالضغط على Enter
-------------------------------------------------------------- */
-function handleLoginKeydown(e){
-  if(e.key === 'Enter'){
-    executeSystemLogin();
-  }
-}
+let state = loadState();
+let currentUser = null;
+let selectedBranchFilter = 'all';
 
 function executeSystemLogin(){
-  const uInput = document.getElementById('loginUser').value.trim();
+  const uInput = document.getElementById('loginUser').value.trim().toLowerCase();
   const pInput = document.getElementById('loginPass').value.trim();
   
-  const foundUser = state.users.find(u => u.username.toLowerCase() === uInput.toLowerCase() && u.pass === pInput);
+  const foundUser = state.users.find(u => 
+    (u.username.toLowerCase() === uInput || u.name.toLowerCase() === uInput) && u.pass === pInput
+  );
+  
   if(!foundUser){
     document.getElementById('loginError').textContent = 'اسم المستخدم أو كلمة المرور غير صحيحة';
     return;
   }
   
   currentUser = foundUser;
-  sessionStorage.setItem('naifActiveUser', JSON.stringify(currentUser));
+  localStorage.setItem('naifActiveUserSession', JSON.stringify(currentUser));
+  logActivity(currentUser.name, 'تسجيل دخول', '—', 'دخول إلى النظام بنجاح');
   document.getElementById('loginCover').classList.remove('show');
   setupUserInterface();
-  toast('مرحباً بك: ' + currentUser.name);
+  toast('أهلاً بك: ' + currentUser.name);
 }
 
 function logoutSystem(){
-  sessionStorage.removeItem('naifActiveUser');
+  localStorage.removeItem('naifActiveUserSession');
   location.reload();
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-  const urlParams = new URLSearchParams(window.location.search);
-  if (urlParams.get('view') === 'customer') {
-    initCustomerPortal();
-    return;
-  }
+  populateLoginDatalist();
   
-  const savedUser = sessionStorage.getItem('naifActiveUser');
+  document.getElementById('loginUser').addEventListener('keydown', (e) => { if(e.key === 'Enter') executeSystemLogin(); });
+  document.getElementById('loginPass').addEventListener('keydown', (e) => { if(e.key === 'Enter') executeSystemLogin(); });
+
+  const urlParams = new URLSearchParams(window.location.search);
+  if (urlParams.get('view') === 'customer') { initCustomerPortal(); return; }
+  
+  const savedUser = localStorage.getItem('naifActiveUserSession');
   if (savedUser) {
-    currentUser = JSON.parse(savedUser);
-    document.getElementById('loginCover').classList.remove('show');
-    setupUserInterface();
+    try {
+      currentUser = JSON.parse(savedUser);
+      if(currentUser && currentUser.name){
+        document.getElementById('loginCover').classList.remove('show');
+        setupUserInterface();
+      }
+    } catch(e){}
   }
 });
+
+function populateLoginDatalist(){
+  const list = document.getElementById('branchUserSuggestions');
+  if(!list) return;
+  let optionsHtml = '';
+  state.users.forEach(u => {
+    optionsHtml += `<option value="${esc(u.username)}">فرع: ${esc(u.name)}</option>`;
+    if(u.name !== u.username){
+      optionsHtml += `<option value="${esc(u.name)}">فرع: ${esc(u.name)}</option>`;
+    }
+  });
+  list.innerHTML = optionsHtml;
+}
 
 function setupUserInterface(){
   const nav = document.getElementById('mainNavButtons');
   document.getElementById('currentUserRoleLabel').textContent = currentUser.role === 'admin' ? 'مدير النظام (Yasser)' : 'فرع: ' + currentUser.name;
-  
   let buttons = '';
   if(currentUser.role === 'admin'){
-    // المدير Yasser يرى كافة الخصائص والشاشات
     buttons = `
-      <button class="active" data-page="dashboard"><span class="ico">▦</span>لوحة التحكم الشاملة</button>
+      <button class="active" data-page="dashboard"><span class="ico">▦</span>لوحة التحكم</button>
       <button data-page="builder"><span class="ico">▣</span>تصميم البطاقة</button>
+      <button data-page="lifecycle"><span class="ico">◉</span>التنبيهات الآلية</button>
       <button data-page="cashier"><span class="ico">⌕</span>نقطة الكاشير</button>
+      <button data-page="customers"><span class="ico">♙</span>العملاء والحملات</button>
       <button data-page="users"><span class="ico">👥</span>إدارة الفروع والمستخدمين</button>
-      <button data-page="reports"><span class="ico">📊</span>التقارير و PDF</button>
+      <button data-page="reports"><span class="ico">📊</span>التقارير والشؤون المالية</button>
+      <button data-page="audit"><span class="ico">▤</span>سجل العمليات والتدقيق</button>
     `;
-    // إظهار فلتر الفروع العلوي لمدير النظام
     document.getElementById('branchFilterContainer').style.display = 'flex';
     populateBranchDropdownFilter();
   } else {
-    // المطاعم والفروع ترى نقطة الكاشير الخاصة بها فقط
-    buttons = `
-      <button class="active" data-page="cashier"><span class="ico">⌕</span>نقطة الكاشير (تسجيل الأختام)</button>
-    `;
+    buttons = `<button class="active" data-page="cashier"><span class="ico">⌕</span>نقطة الكاشير (تسجيل الأختام)</button>`;
     showPage('cashier');
   }
   nav.innerHTML = buttons;
-  
   document.querySelectorAll('.nav button').forEach(b => b.addEventListener('click', () => showPage(b.dataset.page)));
   document.getElementById('today').textContent = new Date().toLocaleDateString('en-US');
-  
   renderDashboard();
-  if(currentUser.role === 'admin'){
-    renderUsersManagementTable();
-    renderReportData();
-  }
+  renderPassPreview();
+  renderHeatmap();
 }
 
 function showPage(name){
   if(currentUser.role !== 'admin' && name !== 'cashier') return;
   document.querySelectorAll('.page').forEach(p => p.classList.toggle('active', p.id === 'page-' + name));
   document.querySelectorAll('.nav button').forEach(b => b.classList.toggle('active', b.dataset.page === name));
-  const titles = {dashboard:'لوحة التحكم الشاملة', builder:'تصميم البطاقة', cashier:'نقطة الكاشير', users:'إدارة فروع ومستخدمي نايف', reports:'التقارير والتصدير'};
+  const titles = {
+    dashboard:'لوحة التحكم الشاملة', builder:'تصميم البطاقة', lifecycle:'محرك التنبيهات الآلية',
+    cashier:'نقطة الكاشير', customers:'إدارة العملاء والحملات', users:'إدارة فروع ومستخدمي نايف',
+    reports:'تقارير الولاء والأداء المالية', audit:'سجل العمليات والتدقيق'
+  };
   document.getElementById('topTitle').textContent = titles[name] || 'لوحة التحكم';
   if(name === 'dashboard') renderDashboard();
+  if(name === 'builder') renderPassPreview();
+  if(name === 'customers') renderCustomersTable();
   if(name === 'users') renderUsersManagementTable();
   if(name === 'reports') renderReportData();
+  if(name === 'audit') renderAudit();
 }
 
-/* -------------------------------------------------------------
-   فلترة الفروع لمدير النظام (Yasser)
-------------------------------------------------------------- */
 function populateBranchDropdownFilter(){
   const select = document.getElementById('globalBranchFilter');
   if(!select) return;
   select.innerHTML = `<option value="all">جميع الفروع (الإجمالي العام)</option>` + 
     state.users.filter(u=>u.role==='cashier').map(u => `<option value="${esc(u.name)}">${esc(u.name)}</option>`).join('');
 }
-
 function applyBranchFilter(){
   selectedBranchFilter = document.getElementById('globalBranchFilter').value;
   renderDashboard();
   renderReportData();
+  renderCustomersTable();
 }
-
 function getFilteredCustomers(){
   if(currentUser.role === 'admin'){
     if(selectedBranchFilter === 'all') return state.customers;
     return state.customers.filter(c => c.branch === selectedBranchFilter);
-  } else {
-    // الفرع العادي يرى عملائه فقط
-    return state.customers.filter(c => c.branch === currentUser.name);
   }
+  return state.customers.filter(c => c.branch === currentUser.name);
 }
 
-/* -------------------------------------------------------------
-   لوحة التحكم مع دعم فلتر الفرع
-------------------------------------------------------------- */
 function renderDashboard(){
   const cs = getFilteredCustomers();
-  const active = cs.filter(c => c.stamps < Number(state.settings.stampGoal||8)).length;
+  const goal = Number(state.settings.stampGoal||8);
+  const active = cs.filter(c => c.stamps < goal).length;
   const stamps = cs.reduce((a,c) => a + (c.visits||0), 0);
-  const eligible = cs.filter(c => c.stamps >= Number(state.settings.stampGoal||8)).length;
+  const eligible = cs.filter(c => c.stamps >= goal).length;
   const redeemed = cs.reduce((a,c) => a + (c.redeemed||0), 0);
   
   document.getElementById('activePasses').textContent = cs.length;
   document.getElementById('stampsIssued').textContent = stamps;
   document.getElementById('claimRate').textContent = (eligible + redeemed ? Math.round(redeemed/(eligible+redeemed)*100) : 0) + '%';
   document.getElementById('retention').textContent = (cs.length ? Math.round(active/cs.length*100) : 0) + '%';
+  
+  const risks = cs.filter(c => c.stamps >= goal || (Date.now() - new Date(c.lastVisit).getTime())/86400000 >= 10);
+  const riskRows = document.getElementById('riskRows');
+  if(riskRows){
+    riskRows.innerHTML = risks.length ? risks.map(c => `
+      <tr>
+        <td class="customer-name">${esc(c.name)}</td>
+        <td>${esc(c.lastVisit)}</td>
+        <td>${c.stamps}/${goal}</td>
+        <td><button class="btn small secondary" onclick="contactCustomerWhatsApp('${c.phone}','${esc(c.name)}')">واتساب</button></td>
+      </tr>
+    `).join('') : '<tr><td colspan="4" class="empty">لا توجد تنبيهات حالياً</td></tr>';
+  }
 }
 
-/* -------------------------------------------------------------
-   شاشة إدارة المستخدمين وفروع نايف (خاصة بمدير النظام Yasser)
-------------------------------------------------------------- */
+function renderHeatmap(){
+  const days=['الأحد','الإثنين','الثلاثاء','الأربعاء','الخميس','الجمعة','السبت'],hours=['10-12','12-2','2-4','4-6','6-8','8-10'];
+  let out='<div></div>'+hours.map(h=>`<div class="head">${h}</div>`).join('');
+  days.forEach((d,i)=>{
+    out+=`<div class="day">${d}</div>`;
+    hours.forEach((h,j)=>{
+      const v=((i*3+j*5+4)%6)+1;
+      out+=`<div class="cell heat-${v}">${v}</div>`;
+    });
+  });
+  const hm = document.getElementById('heatmap');
+  if(hm) hm.innerHTML = out;
+}
+
+function renderPassPreview(){
+  const header = document.getElementById('passHeader')?.value || 'بطاقة مكافآت نايف الرقمية';
+  const branch = document.getElementById('branchName')?.value || 'جميع فروع نايف';
+  const icon = document.getElementById('stampIcon')?.value || '🍗';
+  if(document.getElementById('prevHeader')) document.getElementById('prevHeader').textContent = header;
+  if(document.getElementById('prevBranch')) document.getElementById('prevBranch').textContent = branch;
+  
+  const grid = document.getElementById('prevGrid');
+  if(grid){
+    grid.innerHTML = Array.from({length: 8}, (_, i) => {
+      const filled = i < 6;
+      return `<div class="stamp-cell ${filled?'filled':''}">${filled ? icon : (i+1)}</div>`;
+    }).join('');
+  }
+}
+function saveSettings(){
+  state.settings.logoText = document.getElementById('logoText').value;
+  state.settings.branchName = document.getElementById('branchName').value;
+  state.settings.passHeader = document.getElementById('passHeader').value;
+  state.settings.stampIcon = document.getElementById('stampIcon').value;
+  persist();
+  toast('تم حفظ تصميم بطاقة العميل بنجاح');
+}
+
+function findCashierCustomerLive(){
+  const q = document.getElementById('cashierSearch').value.trim().toLowerCase();
+  const resDiv = document.getElementById('cashierResult');
+  if(!q){ resDiv.innerHTML = '<div class="empty">ابدأ بكتابة اسم العميل أو رقم الهاتف للبحث الفوري...</div>'; return; }
+  
+  const matches = getFilteredCustomers().filter(x => x.name.toLowerCase().includes(q) || x.phone.includes(q) || x.id.toLowerCase().includes(q));
+  if(matches.length === 0){ resDiv.innerHTML = '<div class="empty">لا يوجد عميل مطابق. يمكنك إنشاؤه كعميل جديد أدناه.</div>'; return; }
+  
+  resDiv.innerHTML = matches.map(c => `
+    <div class="card" style="margin-bottom:10px;background:#fffaf6">
+      <div class="inline" style="justify-content:space-between">
+        <div><div class="customer-name" style="font-size:16px">${esc(c.name)}</div><div class="subtle" dir="ltr">${esc(c.phone)} • ${esc(c.id)} (الفرع: ${esc(c.branch||'عام')})</div></div>
+        <span class="tag ${c.stamps >= 8 ? 'eligible' : 'active'}">${c.stamps >= 8 ? 'مؤهل لمكافأة مجانية!' : 'نشط'}</span>
+      </div>
+      <div style="margin-top:12px;font-size:13px">الأختام الحالية: <b>${c.stamps} / 8</b></div>
+      <div class="action-grid" style="margin-top:12px">
+        <button onclick="promptAddStamp('${c.id}')"><span>＋</span>إضافة ختم برقم الفاتورة</button>
+        <button onclick="redeemCustomerReward('${c.id}')"><span>🎁</span>استبدال المكافأة</button>
+      </div>
+    </div>
+  `).join('');
+}
+function clearCashier(){
+  document.getElementById('cashierSearch').value='';
+  document.getElementById('cashierResult').innerHTML='<div class="empty">ابدأ بكتابة اسم العميل أو رقم الهاتف...</div>';
+}
+
+function promptAddStamp(id){
+  openModal('إضافة ختم برقم الفاتورة الإلزامي', `
+    <p>لمنع التلاعب، يرجى إدخال رقم الفاتورة المرتبطة بهذه الزيارة:</p>
+    <div class="field"><label>رقم الفاتورة</label><input id="modalInvoiceNo" placeholder="مثل: INV-98421" style="font-weight:bold;text-align:center"></div>
+  `, [
+    {label: 'تأكيد وإضافة الختم', fn: () => {
+      const inv = document.getElementById('modalInvoiceNo').value.trim();
+      if(!inv){ toast('رقم الفاتورة إلزامي لمنع التلاعب!'); return; }
+      closeModal();
+      executeAddStamp(id, inv);
+    }},
+    {label: 'إلغاء', secondary: true, fn: closeModal}
+  ]);
+}
+
+function executeAddStamp(id, invoiceNo){
+  const c = state.customers.find(x => x.id === id);
+  if(!c) return;
+  if(c.stamps >= 8){ toast('العميل أكمل الأختام، استبدل المكافأة أولاً'); return; }
+  c.stamps++; c.visits++; c.lastVisit = new Date().toISOString().slice(0,10);
+  persist();
+  logActivity(currentUser.name, 'إضافة ختم', invoiceNo, `إضافة ختم للعميل ${c.name} (${c.id}) برقم فاتورة: ${invoiceNo}`);
+  findCashierCustomerLive();
+  toast('تمت إضافة الختم بنجاح برقم فاتورة: ' + invoiceNo);
+}
+
+function redeemCustomerReward(id){
+  const c = state.customers.find(x => x.id === id);
+  if(!c || c.stamps < 8){ toast('لا توجد مكافأة مستحقة'); return; }
+  c.stamps = 0; c.redeemed = (c.redeemed || 0) + 1;
+  persist();
+  logActivity(currentUser.name, 'استبدال مكافأة', 'REWARD', `تسليم وجبة مجانية للعميل ${c.name}`);
+  findCashierCustomerLive();
+  toast('تم تسليم الوجبة المجانية بنجاح!');
+}
+function addCustomer(){
+  const name = document.getElementById('newName').value.trim();
+  const phone = document.getElementById('newPhone').value.replace(/\D/g,'');
+  if(!name || phone.length < 8){ toast('أدخل اسم العميل ورقم هاتف صحيح'); return; }
+  const id = 'NF-' + Math.floor(1000 + Math.random() * 8990);
+  const branchName = currentUser.role === 'admin' ? (selectedBranchFilter === 'all' ? 'مول 360' : selectedBranchFilter) : currentUser.name;
+  state.customers.unshift({id, name, phone, branch: branchName, stamps:0, visits:1, lastVisit:new Date().toISOString().slice(0,10), redeemed:0, history:[]});
+  persist();
+  logActivity(currentUser.name, 'عميل جديد', 'NEW', `إنشاء بطاقة عميل جديد: ${name}`);
+  document.getElementById('newName').value=''; document.getElementById('newPhone').value='';
+  toast('تم إنشاء بطاقة العميل بنجاح');
+  document.getElementById('cashierSearch').value = name;
+  findCashierCustomerLive();
+}
+
+function renderCustomersTable(){
+  const q = (document.getElementById('customerSearch')?.value || '').trim().toLowerCase();
+  const list = getFilteredCustomers().filter(c => c.name.toLowerCase().includes(q) || c.phone.includes(q) || c.id.toLowerCase().includes(q));
+  const tbody = document.getElementById('customerRows');
+  if(!tbody) return;
+  document.getElementById('customerCount').textContent = list.length + ' عميل';
+  tbody.innerHTML = list.map(c => `
+    <tr>
+      <td class="customer-name">${esc(c.name)}</td>
+      <td dir="ltr">${esc(c.phone)}</td>
+      <td>${esc(c.branch||'عام')}</td>
+      <td dir="ltr">${esc(c.id)}</td>
+      <td><b>${c.stamps} / 8</b></td>
+      <td><span class="tag ${c.stamps>=8?'eligible':'active'}">${c.stamps>=8?'مؤهل لمكافأة':'نشط'}</span></td>
+      <td>${esc(c.lastVisit)}</td>
+      <td><button class="btn small secondary" onclick="contactCustomerWhatsApp('${c.phone}','${esc(c.name)}')">واتساب</button></td>
+    </tr>
+  `).join('') || '<tr><td colspan="8" class="empty">لا توجد نتائج مطابقة</td></tr>';
+}
+
+function openCampaign(){
+  openModal('إنشاء حملة تسويقية', `
+    <div class="field"><label>الشريحة المستهدفة</label><select><option>جميع عملاء نايف</option><option>المتأخرون عن الزيارة</option></select></div>
+    <div class="field" style="margin-top:10px"><label>نص الرسالة</label><textarea rows="3">مطاعم نايف تناديك! تجمع أختامك واستمتع بوجبتك المجانية.</textarea></div>
+  `, [{label:'إرسال الحملة', fn:()=>{ closeModal(); toast('تم تجهيز وإرسال الحملة التسويقية'); }},{label:'إلغاء', secondary:true, fn:closeModal}]);
+}
+
 function renderUsersManagementTable(){
   const tbody = document.getElementById('branchUsersTableBody');
   if(!tbody) return;
-  
   tbody.innerHTML = state.users.map((u, idx) => `
     <tr>
       <td><b>${esc(u.name)}</b></td>
@@ -404,22 +614,20 @@ function renderUsersManagementTable(){
     </tr>
   `).join('');
 }
-
 function updateBranchPassword(idx){
   const newPass = document.getElementById(`pass_field_${idx}`).value.trim();
   if(!newPass){ toast('كلمة المرور لا يمكن أن تكون فارغة'); return; }
-  
   state.users[idx].pass = newPass;
   state.users[idx].updated = new Date().toISOString().slice(0,10);
   persist();
   renderUsersManagementTable();
-  toast('تم تحديث كلمة المرور بنجاح وتحديث وقت التعديل');
+  populateLoginDatalist();
+  toast('تم تحديث كلمة المرور بنجاح');
 }
-
 function addNewBranchUserModal(){
   openModal('إضافة فرع / مطعم جديد', `
-    <div class="field"><label>اسم الفرع أو المطعم</label><input id="newUName" placeholder="مثل: فرع السالمية"></div>
-    <div class="field" style="margin-top:10px"><label>اسم المستخدم (Login)</label><input id="newUUser" placeholder="مثل: salmiya"></div>
+    <div class="field"><label>اسم الفرع أو المطعم</label><input id="newUName" placeholder="مثال: فرع السالمية"></div>
+    <div class="field" style="margin-top:10px"><label>اسم المستخدم (Login)</label><input id="newUUser" placeholder="مثال: salmiya"></div>
     <div class="field" style="margin-top:10px"><label>كلمة المرور</label><input id="newUPass" value="123"></div>
   `, [
     {label:'حفظ وإضافة', fn:()=>{
@@ -428,127 +636,107 @@ function addNewBranchUserModal(){
       const pass = document.getElementById('newUPass').value.trim();
       if(!name || !username){ toast('أدخل البيانات كاملة'); return; }
       state.users.push({name, username, pass, role:'cashier', updated:new Date().toISOString().slice(0,10)});
-      persist(); closeModal(); renderUsersManagementTable(); populateBranchDropdownFilter(); toast('تمت إضافة الفرع بنجاح');
+      persist(); closeModal(); renderUsersManagementTable(); populateBranchDropdownFilter(); populateLoginDatalist(); toast('تمت إضافة الفرع بنجاح');
     }},
     {label:'إلغاء', secondary:true, fn:closeModal}
   ]);
 }
-
 function deleteBranchUser(idx){
   if(confirm('هل أنت متأكد من حذف هذا الفرع؟')){
     state.users.splice(idx, 1);
-    persist();
-    renderUsersManagementTable();
-    populateBranchDropdownFilter();
-    toast('تم حذف الفرع');
+    persist(); renderUsersManagementTable(); populateBranchDropdownFilter(); populateLoginDatalist(); toast('تم حذف الفرع');
   }
 }
 
-/* -------------------------------------------------------------
-   نقطة الكاشير مع البحث الفوري بالحرف (Live Search)
-------------------------------------------------------------- */
-function findCashierCustomerLive(){
-  const q = document.getElementById('cashierSearch').value.trim().toLowerCase();
-  const resDiv = document.getElementById('cashierResult');
+function renderReportData(){
+  const tbody = document.getElementById('reportTableBody');
+  if(!tbody) return;
+  const list = getFilteredCustomers();
   
-  if(!q){
-    resDiv.innerHTML = '<div class="empty">ابدأ بكتابة اسم العميل أو رقم الهاتف للبحث الفوري...</div>';
-    return;
-  }
+  const totalStamps = list.reduce((a,c) => a + c.stamps, 0);
+  const totalVisits = list.reduce((a,c) => a + c.visits, 0);
+  const totalRedeemed = list.reduce((a,c) => a + (c.redeemed||0), 0);
   
-  // تصفية العملاء (للفروع يرى عملاء فرعه، لمدير النظام يرى الكل أو الفرع المختار)
-  const allowedCs = currentUser.role === 'admin' ? state.users.find(u=>u.username==='Yasser') ? state.customers : state.customers : state.customers.filter(c => c.branch === currentUser.name);
+  document.getElementById('reportMetricsSummary').innerHTML = `
+    <div class="card metric"><div><div class="label">إجمالي العملاء</div><strong>${list.length}</strong></div></div>
+    <div class="card metric"><div><div class="label">الأختام النشطة</div><strong>${totalStamps}</strong></div></div>
+    <div class="card metric"><div><div class="label">إجمالي الزيارات</div><strong>${totalVisits}</strong></div></div>
+    <div class="card metric"><div><div class="label">الوجبات المستبدلة</div><strong>${totalRedeemed}</strong></div></div>
+  `;
   
-  const matches = allowedCs.filter(x => 
-    x.name.toLowerCase().includes(q) || 
-    x.phone.includes(q) || 
-    x.id.toLowerCase().includes(q)
-  );
-  
-  if(matches.length === 0){
-    resDiv.innerHTML = '<div class="empty">لا يوجد عميل مطابق. يمكنك إنشاؤه كعميل جديد أدناه.</div>';
-    return;
-  }
-  
-  resDiv.innerHTML = matches.map(c => {
-    const goal = Number(state.settings.stampGoal || 8);
-    const st = c.stamps >= goal ? 'eligible' : 'active';
-    return `
-      <div class="card" style="margin-bottom:10px;background:#fffaf6">
-        <div class="inline" style="justify-content:space-between">
-          <div><div class="customer-name" style="font-size:16px">${esc(c.name)}</div><div class="subtle" dir="ltr">${esc(c.phone)} • ${esc(c.id)} (الفرع: ${esc(c.branch||'عام')})</div></div>
-          <span class="tag ${st}">${c.stamps >= goal ? 'مؤهل لمكافأة مجانية!' : 'نشط'}</span>
-        </div>
-        <div style="margin-top:12px;font-size:13px">الأختام الحالية: <b>${c.stamps} / ${goal}</b></div>
-        <div class="action-grid" style="margin-top:12px">
-          <button onclick="addStampToCustomer('${c.id}')"><span>＋</span>إضافة ختم</button>
-          <button onclick="redeemCustomerReward('${c.id}')"><span>🎁</span>استبدال المكافأة</button>
-        </div>
-      </div>
-    `;
-  }).join('');
+  tbody.innerHTML = list.map(c => `
+    <tr>
+      <td dir="ltr"><b>${esc(c.id)}</b></td>
+      <td class="customer-name">${esc(c.name)}</td>
+      <td dir="ltr">${esc(c.phone)}</td>
+      <td>${esc(c.branch||'عام')}</td>
+      <td style="color:var(--orange);font-weight:bold">${c.stamps} / 8</td>
+      <td>${c.visits}</td>
+      <td>${c.redeemed||0}</td>
+    </tr>
+  `).join('');
 }
 
-function clearCashier(){
-  document.getElementById('cashierSearch').value='';
-  document.getElementById('cashierResult').innerHTML='<div class="empty">ابدأ بكتابة اسم العميل أو رقم الهاتف للبحث الفوري...</div>';
+function generateAndExportPDF(){
+  toast('جاري تحضير ملف PDF التقارير المالية...');
+  const { jsPDF } = window.jspdf;
+  const pdf = new jsPDF('p', 'pt', 'a4');
+  pdf.setFont('Tahoma', 'normal');
+  pdf.text('Naif Food Financial & Loyalty Report - 2026', 40, 40);
+  pdf.text('Branch: ' + (selectedBranchFilter === 'all' ? 'All Branches' : selectedBranchFilter), 40, 60);
+  pdf.save('Naif_Financial_Report.pdf');
+  toast('تم تصدير التقرير المالي PDF بنجاح');
 }
 
-function addStampToCustomer(id){
-  const c = state.customers.find(x => x.id === id);
-  const goal = Number(state.settings.stampGoal || 8);
-  if(!c) return;
-  if(c.stamps >= goal){ toast('العميل أكمل الأختام، استبدل المكافأة أولاً'); return; }
-  c.stamps++; c.visits++; c.lastVisit = new Date().toISOString().slice(0,10);
-  c.branch = currentUser.role === 'admin' ? (selectedBranchFilter === 'all' ? 'مول 360' : selectedBranchFilter) : currentUser.name;
+function logActivity(user, action, invoice, details){
+  if(!state.activity) state.activity = [];
+  state.activity.unshift({at: new Date().toISOString(), user, action, invoice, details});
   persist();
-  findCashierCustomerLive();
-  toast('تمت إضافة ختم بنجاح بواسطة: ' + currentUser.name);
+}
+function renderAudit(){
+  const tbody = document.getElementById('auditRows');
+  if(!tbody) return;
+  const a = state.activity || [];
+  document.getElementById('auditCount').textContent = a.length + ' عملية';
+  tbody.innerHTML = a.map(x => `
+    <tr>
+      <td>${new Date(x.at).toLocaleString('en-US')}</td>
+      <td><b>${esc(x.user)}</b></td>
+      <td><span class="tag active">${esc(x.action)}</span></td>
+      <td dir="ltr"><b>${esc(x.invoice || '—')}</b></td>
+      <td>${esc(x.details)}</td>
+    </tr>
+  `).join('') || '<tr><td colspan="5" class="empty">لا توجد عمليات مسجلة بعد</td></tr>';
+}
+function exportAudit(){ toast('تم تصدير سجل العمليات والتدقيق'); }
+
+function openQr(){
+  const webUrl = "https://loyalty-sepia.vercel.app/?view=customer";
+  const qrImgUrl = "https://i.postimg.cc/g285qySB/web-QR.png";
+  openModal('رمز QR الخاص بشركة نايف', `
+    <div style="text-align:center">
+      <div class="qr-box"><img src="${qrImgUrl}" alt="QR Code"></div>
+      <p style="font-weight:bold;color:var(--orange);margin:10px 0 5px">امسح الرمز لفتح بطاقة الولاء على هاتفك</p>
+      <input class="search" value="${webUrl}" readonly style="direction:ltr;text-align:center;font-weight:bold;color:var(--orange)">
+    </div>
+  `, [{label:'إغلاق', secondary:true, fn:closeModal}]);
 }
 
-function redeemCustomerReward(id){
-  const c = state.customers.find(x => x.id === id);
-  const goal = Number(state.settings.stampGoal || 8);
-  if(!c || c.stamps < goal){ toast('لا توجد مكافأة مستحقة'); return; }
-  c.stamps = 0; c.redeemed = (c.redeemed || 0) + 1;
-  persist();
-  findCashierCustomerLive();
-  toast('تم تسليم وجبة نايف المجانية بنجاح!');
-}
-
-function addCustomer(){
-  const name = document.getElementById('newName').value.trim();
-  const phone = document.getElementById('newPhone').value.replace(/\D/g,'');
-  if(!name || phone.length < 8){ toast('أدخل اسم العميل ورقم هاتف صحيح'); return; }
-  const id = 'NF-' + Math.floor(1000 + Math.random() * 8990);
-  const branchName = currentUser.role === 'admin' ? (selectedBranchFilter === 'all' ? 'مول 360' : selectedBranchFilter) : currentUser.name;
-  const newC = {id, name, phone, branch: branchName, stamps:0, visits:1, lastVisit:new Date().toISOString().slice(0,10), redeemed:0, history:[]};
-  state.customers.unshift(newC);
-  persist();
-  document.getElementById('newName').value=''; document.getElementById('newPhone').value='';
-  toast('تم إنشاء بطاقة العميل بنجاح');
-  document.getElementById('cashierSearch').value = name;
-  findCashierCustomerLive();
-}
-
-/* -------------------------------------------------------------
-   واجهة العميل الخاصة عند مسح الـ QR Code
-------------------------------------------------------------- */
 function initCustomerPortal(){
   document.body.innerHTML = `
-    <div style="max-width:440px;margin:30px auto;padding:15px;font-family:Tahoma">
+    <div style="max-width:440px;margin:20px auto;padding:15px;font-family:Tahoma">
       <div style="background:#fff;border-radius:24px;box-shadow:0 10px 40px rgba(0,0,0,0.08);overflow:hidden;border:1px solid #eee">
         <div style="background:linear-gradient(135deg,#e65100,#ffb300);color:#fff;padding:25px 20px;text-align:center">
           <img src="https://i.postimg.cc/NM2zJWZD/NAIF-LOGO.jpg" style="width:60px;height:60px;border-radius:14px;object-fit:cover;background:#fff;padding:3px;margin-bottom:8px">
           <h3 style="margin:0;font-size:20px">شركة نايف للأغذية</h3>
-          <div style="font-size:12px;opacity:0.9;margin-top:4px">بطاقة الولاء الرقمية</div>
+          <div style="font-size:12px;opacity:0.9;margin-top:4px">بطاقة الولاء الرقمية الخاصة بك</div>
         </div>
         <div id="customerPortalBody" style="padding:22px;text-align:center">
-          <p style="color:#666;font-size:13px">أدخل رقم هاتفك لاستعراض أختامك وبطاقتك الخاصة:</p>
+          <p style="color:#666;font-size:13px">أدخل رقم هاتفك المحمول لعرض أختامك وبطاقتك:</p>
           <div class="field" style="margin:15px 0">
             <input id="custPhoneCheck" placeholder="965XXXXXXXX" inputmode="tel" style="width:100%;padding:12px;text-align:center;font-size:18px;font-weight:bold;border:1px solid #ddd;border-radius:10px">
           </div>
-          <button class="btn" style="width:100%;padding:12px;background:#e65100;border-radius:10px" onclick="checkCustomerPassCard()">عرض بطاقتي</button>
+          <button class="btn" style="width:100%;padding:12px;background:#e65100;border-radius:10px" onclick="checkCustomerPassCard()">عرض أختامي وبطاقتي</button>
         </div>
       </div>
     </div>
@@ -560,53 +748,34 @@ function checkCustomerPassCard(){
   if(!phone){ alert('أدخل رقم الهاتف'); return; }
   if(!c){
     const id = 'NF-' + Math.floor(1000 + Math.random() * 8990);
-    c = {id, name:'عميل نايف', phone, branch:'عام', stamps:0, visits:0, lastVisit:'2026-03-01', redeemed:0, history:[]};
+    c = {id, name:'عميل نايف', phone, branch:'عام', stamps:0, visits:0, redeemed:0};
     state.customers.unshift(c); persist();
   }
-  const goal = Number(state.settings.stampGoal || 8);
-  const icon = state.settings.stampIcon || '🍗';
-  const stampsHtml = Array.from({length: goal}, (_, i) => {
+  const stampsHtml = Array.from({length: 8}, (_, i) => {
     const filled = i < c.stamps;
-    return `<div style="height:45px;border:2px ${filled?'solid #e65100':'dashed #ccc'};border-radius:50%;display:grid;place-items:center;font-size:20px;background:${filled?'#fff3ec':'#fafafa'};color:${filled?'#e65100':'#ccc'}">${filled?icon:(i+1)}</div>`;
+    return `<div style="height:48px;border:2px ${filled?'solid #e65100':'dashed #ccc'};border-radius:50%;display:grid;place-items:center;font-size:20px;background:${filled?'#fff3ec':'#fafafa'};color:${filled?'#e65100':'#ccc'}">${filled?'🍗':(i+1)}</div>`;
   }).join('');
   
   document.getElementById('customerPortalBody').innerHTML = `
     <div style="display:flex;justify-content:space-between;margin-bottom:12px">
       <b>${esc(c.name)}</b>
-      <span style="color:#e65100;font-weight:bold">${c.stamps} / ${goal} أختام</span>
+      <span style="color:#e65100;font-weight:bold">${c.stamps} / 8 أختام</span>
     </div>
     <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:15px 0">${stampsHtml}</div>
-    <div style="background:#fff9f5;padding:12px;border-radius:10px;font-size:13px;color:#a43a00;font-weight:bold;margin-top:15px">${state.settings.rewardText}</div>
+    <div style="background:#fff9f5;padding:12px;border-radius:10px;font-size:13px;color:#a43a00;font-weight:bold;margin-top:15px">وجبة نايف مجانية من اختيارك عند اكتمال الأختام</div>
     <button class="btn secondary small" style="margin-top:20px" onclick="location.reload()">بحث برقم آخر</button>
   `;
 }
 
-/* التقارير والـ PDF */
-function renderReportData(){
-  const tbody = document.getElementById('reportTableBody');
-  if(!tbody) return;
-  const cs = getFilteredCustomers();
-  tbody.innerHTML = cs.map(c => `
-    <tr>
-      <td dir="ltr"><b>${esc(c.id)}</b></td>
-      <td>${esc(c.name)}</td>
-      <td dir="ltr">${esc(c.phone)}</td>
-      <td>${esc(c.branch || 'عام')}</td>
-      <td style="color:#e65100;font-weight:bold">${c.stamps}</td>
-      <td>${c.visits}</td>
-      <td>${c.redeemed||0}</td>
-    </tr>
-  `).join('');
+function simulateNotice(type){
+  const data={geo:['شركة نايف للأغذية📍','أنت قريب من فرع نايف! كارتك مستنيك.'],thanks:['شكراً لزيارتك نايف ❤️','تمت إضافة ختم جديد إلى بطاقتك.'],reward:['مكافأتك من نايف بانتظارك 🎁','أكملت جميع الأختام! استبدلها بوجبتك المجانية.']}[type];
+  document.getElementById('notificationTitle').textContent=data[0];
+  document.getElementById('notificationBody').textContent=data[1];
+  toast('تم تشغيل الإشعار');
 }
-function generateAndExportPDF(){
-  const { jsPDF } = window.jspdf;
-  const pdf = new jsPDF('p', 'pt', 'a4');
-  pdf.text('Naif Food Loyalty Report - 2026', 40, 40);
-  pdf.save('Naif_Report.pdf');
-  toast('تم تصدير الـ PDF بنجاح');
-}
-function openQr(){
-  openModal('رابط QR العام', `<div style="text-align:center"><p>رابط بطاقة العميل:</p><input class="search" value="https://loyalty-sepia.vercel.app/?view=customer" readonly style="direction:ltr;text-align:center"></div>`, [{label:'إغلاق', secondary:true, fn:closeModal}]);
+function contactCustomerWhatsApp(phone, name){
+  const msg = encodeURIComponent(`مرحباً ${name}، نفتقد زيارتك في مطاعم نايف! زرنا واجمع أختامك لتبتسم بمكافأتك المجانية.`);
+  window.open(`https://wa.me/${phone.replace(/\D/g,'')}?text=${msg}`,'_blank');
 }
 function openModal(title, body, actions){
   document.getElementById('modalTitle').textContent=title;
@@ -616,7 +785,6 @@ function openModal(title, body, actions){
   document.getElementById('modalBackdrop').classList.add('show');
 }
 function closeModal(){ document.getElementById('modalBackdrop').classList.remove('show'); }
-function saveSettings(){ toast('تم حفظ الإعدادات'); }
 </script>
 </body>
 </html>
